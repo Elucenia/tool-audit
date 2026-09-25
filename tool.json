@@ -1,0 +1,428 @@
+{
+  "tool": {
+    "id": "audit",
+    "title": "AUDIT (teste de identificação de problemas com álcool)",
+    "short": "Uso de risco, nocivo e dependência de álcool",
+    "spec": [
+      "psiquiatria",
+      "medicina-de-familia-e-comunidade",
+      "clinica-medica",
+      "medicina-do-trabalho"
+    ],
+    "tier": 1,
+    "desc": "AUDIT da OMS com 10 perguntas: identifique uso de baixo risco, uso de risco, uso nocivo e provável dependência de álcool, com a intervenção de cada zona.",
+    "lead": "Questionário da OMS que identifica o padrão de consumo de álcool nos últimos 12 meses e indica a intervenção adequada para cada zona de risco.",
+    "fields": [
+      [
+        "q1",
+        "1. Com que frequência você consome bebidas alcoólicas?",
+        "sel",
+        {
+          "opts": {
+            "0": "Nunca",
+            "1": "Mensalmente ou menos",
+            "2": "De 2 a 4 vezes por mês",
+            "3": "De 2 a 3 vezes por semana",
+            "4": "4 ou mais vezes por semana"
+          }
+        }
+      ],
+      [
+        "q2",
+        "2. Quantas doses alcoólicas você consome tipicamente ao beber? (1 dose: 1 lata de cerveja de 350 mL, 1 taça de vinho de 150 mL ou 1 dose de destilado de 40 mL)",
+        "sel",
+        {
+          "opts": {
+            "0": "0 ou 1",
+            "1": "2 ou 3",
+            "2": "4 ou 5",
+            "3": "6 ou 7",
+            "4": "8 ou mais"
+          }
+        }
+      ],
+      [
+        "q3",
+        "3. Com que frequência você consome cinco ou mais doses de uma vez?",
+        "sel",
+        {
+          "opts": {
+            "0": "Nunca",
+            "1": "Menos do que uma vez ao mês",
+            "2": "Mensalmente",
+            "3": "Semanalmente",
+            "4": "Todos ou quase todos os dias"
+          }
+        }
+      ],
+      [
+        "q4",
+        "4. Quantas vezes ao longo dos últimos 12 meses você achou que não conseguiria parar de beber uma vez tendo começado?",
+        "sel",
+        {
+          "opts": {
+            "0": "Nunca",
+            "1": "Menos do que uma vez ao mês",
+            "2": "Mensalmente",
+            "3": "Semanalmente",
+            "4": "Todos ou quase todos os dias"
+          }
+        }
+      ],
+      [
+        "q5",
+        "5. Quantas vezes ao longo dos últimos 12 meses você, por causa do álcool, não conseguiu fazer o que era esperado de você?",
+        "sel",
+        {
+          "opts": {
+            "0": "Nunca",
+            "1": "Menos do que uma vez ao mês",
+            "2": "Mensalmente",
+            "3": "Semanalmente",
+            "4": "Todos ou quase todos os dias"
+          }
+        }
+      ],
+      [
+        "q6",
+        "6. Quantas vezes ao longo dos últimos 12 meses você precisou beber pela manhã para poder se sentir bem ao longo do dia após ter bebido bastante no dia anterior?",
+        "sel",
+        {
+          "opts": {
+            "0": "Nunca",
+            "1": "Menos do que uma vez ao mês",
+            "2": "Mensalmente",
+            "3": "Semanalmente",
+            "4": "Todos ou quase todos os dias"
+          }
+        }
+      ],
+      [
+        "q7",
+        "7. Quantas vezes ao longo dos últimos 12 meses você se sentiu culpado(a) ou com remorso depois de ter bebido?",
+        "sel",
+        {
+          "opts": {
+            "0": "Nunca",
+            "1": "Menos do que uma vez ao mês",
+            "2": "Mensalmente",
+            "3": "Semanalmente",
+            "4": "Todos ou quase todos os dias"
+          }
+        }
+      ],
+      [
+        "q8",
+        "8. Quantas vezes ao longo dos últimos 12 meses você foi incapaz de lembrar o que aconteceu devido à bebida?",
+        "sel",
+        {
+          "opts": {
+            "0": "Nunca",
+            "1": "Menos do que uma vez ao mês",
+            "2": "Mensalmente",
+            "3": "Semanalmente",
+            "4": "Todos ou quase todos os dias"
+          }
+        }
+      ],
+      [
+        "q9",
+        "9. Você já causou ferimentos ou prejuízos a você mesmo(a) ou a outra pessoa após ter bebido?",
+        "sel",
+        {
+          "opts": {
+            "0": "Não",
+            "2": "Sim, mas não nos últimos 12 meses",
+            "4": "Sim, nos últimos 12 meses"
+          }
+        }
+      ],
+      [
+        "q10",
+        "10. Algum parente, amigo ou médico já se preocupou com o fato de você beber ou sugeriu que você parasse?",
+        "sel",
+        {
+          "opts": {
+            "0": "Não",
+            "2": "Sim, mas não nos últimos 12 meses",
+            "4": "Sim, nos últimos 12 meses"
+          }
+        }
+      ]
+    ],
+    "score": {
+      "label": "AUDIT",
+      "unit": "de 40",
+      "bands": [
+        [
+          0,
+          "low",
+          "Zona I (0 a 7): uso de baixo risco",
+          "Educação em saúde sobre álcool."
+        ],
+        [
+          8,
+          "mid",
+          "Zona II (8 a 15): uso de risco",
+          "Orientação básica (intervenção breve) sobre redução do consumo."
+        ],
+        [
+          16,
+          "high",
+          "Zona III (16 a 19): uso nocivo",
+          "Intervenção breve com aconselhamento e acompanhamento continuado."
+        ],
+        [
+          20,
+          "high",
+          "Zona IV (20 a 40): provável dependência",
+          "Encaminhar a serviço especializado (CAPS AD ou especialista) para avaliação diagnóstica e tratamento."
+        ]
+      ]
+    },
+    "formula": "<p>Itens 1 a 8: 0 a 4 pontos. Itens 9 e 10: 0, 2 ou 4 pontos. Total: 0 a 40.</p><p>Pontuação ≥ 8 indica uso de risco ou nocivo e possível dependência. Pontos nos itens 4 a 6 sugerem dependência; nos itens 7 a 10, dano já instalado.</p>",
+    "table": [
+      [
+        "Zona (OMS)",
+        "Pontos",
+        "Intervenção"
+      ],
+      [
+        "I",
+        "0 a 7",
+        "Educação sobre álcool"
+      ],
+      [
+        "II",
+        "8 a 15",
+        "Orientação simples (intervenção breve)"
+      ],
+      [
+        "III",
+        "16 a 19",
+        "Intervenção breve e monitoramento"
+      ],
+      [
+        "IV",
+        "20 a 40",
+        "Encaminhamento para avaliação diagnóstica e tratamento"
+      ]
+    ],
+    "table_note": "Zonas do manual da OMS (Babor 2001). Na validação brasileira (Lima 2005), o corte ≥ 8 teve bom desempenho para uso problemático. Os itens seguem a versão brasileira usada no SUS, em que as faixas de doses dos itens 2 e 3 foram adaptadas (0 ou 1 a 8 ou mais; cinco ou mais doses de uma vez) em relação ao original da OMS.",
+    "tips": [
+      "Confira a dose-padrão com o paciente: no Brasil, 1 dose ≈ 14 g de álcool (1 lata de 350 mL de cerveja, 1 taça de 150 mL de vinho, 1 dose de 40 mL de destilado).",
+      "Em mulheres, idosos e adolescentes, muitos serviços usam corte mais baixo (≥ 5 a 7) porque o mesmo consumo traz mais risco.",
+      "O AUDIT-C (itens 1 a 3) é uma versão rápida para rastreio; se positiva, complete os 10 itens.",
+      "Pontuação na zona IV ou sinais de abstinência pedem avaliação de risco de síndrome de abstinência (CIWA-Ar) antes de qualquer interrupção abrupta."
+    ],
+    "sources": [
+      [
+        "Saunders JB et al. Development of the Alcohol Use Disorders Identification Test (AUDIT): WHO Collaborative Project on Early Detection of Persons with Harmful Alcohol Consumption-II. Addiction, 1993.",
+        "https://doi.org/10.1111/j.1360-0443.1993.tb02093.x"
+      ],
+      [
+        "Lima CT et al. Concurrent and construct validity of the AUDIT in an urban Brazilian sample. Alcohol Alcohol, 2005.",
+        "https://doi.org/10.1093/alcalc/agh202"
+      ],
+      [
+        "Babor TF et al. AUDIT: the Alcohol Use Disorders Identification Test. Guidelines for use in primary care. 2nd ed. World Health Organization, 2001.",
+        "https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a"
+      ]
+    ],
+    "cases": [
+      [
+        "Bebe 2 a 4 vezes por mês, 2 ou 3 doses, 5 ou mais doses menos de uma vez ao mês: 4 (zona I)",
+        {
+          "q1": "2",
+          "q2": "1",
+          "q3": "1",
+          "q4": "0",
+          "q5": "0",
+          "q6": "0",
+          "q7": "0",
+          "q8": "0",
+          "q9": "0",
+          "q10": "0"
+        },
+        {
+          "score": 4,
+          "level": "low",
+          "verdict": "Zona I"
+        }
+      ],
+      [
+        "Limite da zona II: 8 pontos",
+        {
+          "q1": "3",
+          "q2": "2",
+          "q3": "2",
+          "q4": "1",
+          "q5": "0",
+          "q6": "0",
+          "q7": "0",
+          "q8": "0",
+          "q9": "0",
+          "q10": "0"
+        },
+        {
+          "score": 8,
+          "level": "mid",
+          "verdict": "Zona II"
+        }
+      ],
+      [
+        "Limite da zona III: 16 pontos",
+        {
+          "q1": "4",
+          "q2": "3",
+          "q3": "3",
+          "q4": "2",
+          "q5": "2",
+          "q6": "0",
+          "q7": "2",
+          "q8": "0",
+          "q9": "0",
+          "q10": "0"
+        },
+        {
+          "score": 16,
+          "level": "high",
+          "verdict": "Zona III"
+        }
+      ],
+      [
+        "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        {
+          "q1": "4",
+          "q2": "4",
+          "q3": "4",
+          "q4": "3",
+          "q5": "2",
+          "q6": "2",
+          "q7": "2",
+          "q8": "0",
+          "q9": "4",
+          "q10": "0"
+        },
+        {
+          "score": 25,
+          "level": "high",
+          "verdict": "Zona IV"
+        }
+      ]
+    ],
+    "batch": "neuro-mente",
+    "kind": "Escore",
+    "config": {
+      "unit": "de 40",
+      "label": "AUDIT",
+      "fields": [
+        [
+          "q1",
+          "sel",
+          0
+        ],
+        [
+          "q2",
+          "sel",
+          0
+        ],
+        [
+          "q3",
+          "sel",
+          0
+        ],
+        [
+          "q4",
+          "sel",
+          0
+        ],
+        [
+          "q5",
+          "sel",
+          0
+        ],
+        [
+          "q6",
+          "sel",
+          0
+        ],
+        [
+          "q7",
+          "sel",
+          0
+        ],
+        [
+          "q8",
+          "sel",
+          0
+        ],
+        [
+          "q9",
+          "sel",
+          0
+        ],
+        [
+          "q10",
+          "sel",
+          0
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "low",
+          "Zona I (0 a 7): uso de baixo risco",
+          "Educação em saúde sobre álcool."
+        ],
+        [
+          8,
+          "mid",
+          "Zona II (8 a 15): uso de risco",
+          "Orientação básica (intervenção breve) sobre redução do consumo."
+        ],
+        [
+          16,
+          "high",
+          "Zona III (16 a 19): uso nocivo",
+          "Intervenção breve com aconselhamento e acompanhamento continuado."
+        ],
+        [
+          20,
+          "high",
+          "Zona IV (20 a 40): provável dependência",
+          "Encaminhar a serviço especializado (CAPS AD ou especialista) para avaliação diagnóstica e tratamento."
+        ]
+      ]
+    },
+    "areaId": "neuro-mente",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/neuro-mente.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/neuro-mente.php",
+    "sha256": "3ce3a7987a3ec63938e5f21d8d24ec7f7f8880c1b54458ef7046807a89221cac",
+    "bytes": 102818
+  },
+  "clinicalValidation": "not-performed"
+}
