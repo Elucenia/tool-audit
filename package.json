@@ -1,7 +1,7 @@
 {
   "name": "@elucenia/tool-audit",
   "version": "0.1.0",
-  "description": "AUDIT (teste de identificação de problemas com álcool) · Elucenia: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
+  "description": "AUDIT (teste de identificação de problemas com álcool) · ELUCENIA: reprodução técnica de fórmula ou escore clínico, sem dependências, para navegador e Node.js.",
   "keywords": [
     "elucenia",
     "medical-calculator",
