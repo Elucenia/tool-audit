@@ -1,6 +1,21 @@
 [
   {
-    "label": "Bebe 2 a 4 vezes por mês, 2 ou 3 doses, 5 ou mais doses menos de uma vez ao mês: 4 (zona I)",
+    "id": "audit",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+    "originalInput": {
+      "q1": "2",
+      "q2": "1",
+      "q3": "1",
+      "q4": "0",
+      "q5": "0",
+      "q6": "0",
+      "q7": "0",
+      "q8": "0",
+      "q9": "0",
+      "q10": "0"
+    },
     "input": {
       "q1": "2",
       "q2": "1",
@@ -18,11 +33,35 @@
       "level": "low",
       "verdict": "Zona I"
     },
+    "recordedResult": {
+      "main": [
+        "4",
+        "de 40"
+      ],
+      "label": "AUDIT",
+      "raw": {
+        "score": 4
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "audit",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Limite da zona II: 8 pontos",
     "originalInput": {
-      "q1": "2",
-      "q2": "1",
-      "q3": "1",
-      "q4": "0",
+      "q1": "3",
+      "q2": "2",
+      "q3": "2",
+      "q4": "1",
       "q5": "0",
       "q6": "0",
       "q7": "0",
@@ -30,10 +69,6 @@
       "q9": "0",
       "q10": "0"
     },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Limite da zona II: 8 pontos",
     "input": {
       "q1": "3",
       "q2": "2",
@@ -51,22 +86,42 @@
       "level": "mid",
       "verdict": "Zona II"
     },
+    "recordedResult": {
+      "main": [
+        "8",
+        "de 40"
+      ],
+      "label": "AUDIT",
+      "raw": {
+        "score": 8
+      }
+    },
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
+  },
+  {
+    "id": "audit",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Limite da zona III: 16 pontos",
     "originalInput": {
-      "q1": "3",
-      "q2": "2",
-      "q3": "2",
-      "q4": "1",
-      "q5": "0",
+      "q1": "4",
+      "q2": "3",
+      "q3": "3",
+      "q4": "2",
+      "q5": "2",
       "q6": "0",
-      "q7": "0",
+      "q7": "2",
       "q8": "0",
       "q9": "0",
       "q10": "0"
     },
-    "expandedZeroOptions": []
-  },
-  {
-    "label": "Limite da zona III: 16 pontos",
     "input": {
       "q1": "4",
       "q2": "3",
@@ -84,22 +139,42 @@
       "level": "high",
       "verdict": "Zona III"
     },
-    "originalInput": {
-      "q1": "4",
-      "q2": "3",
-      "q3": "3",
-      "q4": "2",
-      "q5": "2",
-      "q6": "0",
-      "q7": "2",
-      "q8": "0",
-      "q9": "0",
-      "q10": "0"
+    "recordedResult": {
+      "main": [
+        "16",
+        "de 40"
+      ],
+      "label": "AUDIT",
+      "raw": {
+        "score": 16
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+    "id": "audit",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+    "originalInput": {
+      "q1": "4",
+      "q2": "4",
+      "q3": "4",
+      "q4": "3",
+      "q5": "2",
+      "q6": "2",
+      "q7": "2",
+      "q8": "0",
+      "q9": "4",
+      "q10": "0"
+    },
     "input": {
       "q1": "4",
       "q2": "4",
@@ -117,18 +192,23 @@
       "level": "high",
       "verdict": "Zona IV"
     },
-    "originalInput": {
-      "q1": "4",
-      "q2": "4",
-      "q3": "4",
-      "q4": "3",
-      "q5": "2",
-      "q6": "2",
-      "q7": "2",
-      "q8": "0",
-      "q9": "4",
-      "q10": "0"
+    "recordedResult": {
+      "main": [
+        "25",
+        "de 40"
+      ],
+      "label": "AUDIT",
+      "raw": {
+        "score": 25
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]

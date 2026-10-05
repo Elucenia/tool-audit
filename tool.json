@@ -3,15 +3,15 @@
     "id": "audit",
     "title": "AUDIT (teste de identificação de problemas com álcool)",
     "short": "Uso de risco, nocivo e dependência de álcool",
+    "desc": "AUDIT da OMS com 10 perguntas: identifique uso de baixo risco, uso de risco, uso nocivo e provável dependência de álcool, com a intervenção de cada zona.",
+    "lead": "Questionário da OMS que identifica o padrão de consumo de álcool nos últimos 12 meses e indica a intervenção adequada para cada zona de risco.",
+    "kind": "Escore",
     "spec": [
       "psiquiatria",
       "medicina-de-familia-e-comunidade",
       "clinica-medica",
       "medicina-do-trabalho"
     ],
-    "tier": 1,
-    "desc": "AUDIT da OMS com 10 perguntas: identifique uso de baixo risco, uso de risco, uso nocivo e provável dependência de álcool, com a intervenção de cada zona.",
-    "lead": "Questionário da OMS que identifica o padrão de consumo de álcool nos últimos 12 meses e indica a intervenção adequada para cada zona de risco.",
     "fields": [
       [
         "q1",
@@ -29,21 +29,21 @@
       ],
       [
         "q2",
-        "2. Quantas doses alcoólicas você consome tipicamente ao beber? (1 dose: 1 lata de cerveja de 350 mL, 1 taça de vinho de 150 mL ou 1 dose de destilado de 40 mL)",
+        "2. Num dia típico em que bebe, quantas bebidas-padrão consome? Nesta edição, cada bebida-padrão contém 10 g de etanol.",
         "sel",
         {
           "opts": {
-            "0": "0 ou 1",
-            "1": "2 ou 3",
-            "2": "4 ou 5",
-            "3": "6 ou 7",
-            "4": "8 ou mais"
+            "0": "1 ou 2",
+            "1": "3 ou 4",
+            "2": "5 ou 6",
+            "3": "7 a 9",
+            "4": "10 ou mais"
           }
         }
       ],
       [
         "q3",
-        "3. Com que frequência você consome cinco ou mais doses de uma vez?",
+        "3. Com que frequência bebe seis ou mais bebidas-padrão na mesma ocasião? Nesta edição, cada bebida-padrão contém 10 g de etanol.",
         "sel",
         {
           "opts": {
@@ -150,71 +150,7 @@
         }
       ]
     ],
-    "score": {
-      "label": "AUDIT",
-      "unit": "de 40",
-      "bands": [
-        [
-          0,
-          "low",
-          "Zona I (0 a 7): uso de baixo risco",
-          "Educação em saúde sobre álcool."
-        ],
-        [
-          8,
-          "mid",
-          "Zona II (8 a 15): uso de risco",
-          "Orientação básica (intervenção breve) sobre redução do consumo."
-        ],
-        [
-          16,
-          "high",
-          "Zona III (16 a 19): uso nocivo",
-          "Intervenção breve com aconselhamento e acompanhamento continuado."
-        ],
-        [
-          20,
-          "high",
-          "Zona IV (20 a 40): provável dependência",
-          "Encaminhar a serviço especializado (CAPS AD ou especialista) para avaliação diagnóstica e tratamento."
-        ]
-      ]
-    },
     "formula": "<p>Itens 1 a 8: 0 a 4 pontos. Itens 9 e 10: 0, 2 ou 4 pontos. Total: 0 a 40.</p><p>Pontuação ≥ 8 indica uso de risco ou nocivo e possível dependência. Pontos nos itens 4 a 6 sugerem dependência; nos itens 7 a 10, dano já instalado.</p>",
-    "table": [
-      [
-        "Zona (OMS)",
-        "Pontos",
-        "Intervenção"
-      ],
-      [
-        "I",
-        "0 a 7",
-        "Educação sobre álcool"
-      ],
-      [
-        "II",
-        "8 a 15",
-        "Orientação simples (intervenção breve)"
-      ],
-      [
-        "III",
-        "16 a 19",
-        "Intervenção breve e monitoramento"
-      ],
-      [
-        "IV",
-        "20 a 40",
-        "Encaminhamento para avaliação diagnóstica e tratamento"
-      ]
-    ],
-    "table_note": "Zonas do manual da OMS (Babor 2001). Na validação brasileira (Lima 2005), o corte ≥ 8 teve bom desempenho para uso problemático. Os itens seguem a versão brasileira usada no SUS, em que as faixas de doses dos itens 2 e 3 foram adaptadas (0 ou 1 a 8 ou mais; cinco ou mais doses de uma vez) em relação ao original da OMS.",
-    "tips": [
-      "Confira a dose-padrão com o paciente: no Brasil, 1 dose ≈ 14 g de álcool (1 lata de 350 mL de cerveja, 1 taça de 150 mL de vinho, 1 dose de 40 mL de destilado).",
-      "Em mulheres, idosos e adolescentes, muitos serviços usam corte mais baixo (≥ 5 a 7) porque o mesmo consumo traz mais risco.",
-      "O AUDIT-C (itens 1 a 3) é uma versão rápida para rastreio; se positiva, complete os 10 itens.",
-      "Pontuação na zona IV ou sinais de abstinência pedem avaliação de risco de síndrome de abstinência (CIWA-Ar) antes de qualquer interrupção abrupta."
-    ],
     "sources": [
       [
         "Saunders JB et al. Development of the Alcohol Use Disorders Identification Test (AUDIT): WHO Collaborative Project on Early Detection of Persons with Harmful Alcohol Consumption-II. Addiction, 1993.",
@@ -231,7 +167,7 @@
     ],
     "cases": [
       [
-        "Bebe 2 a 4 vezes por mês, 2 ou 3 doses, 5 ou mais doses menos de uma vez ao mês: 4 (zona I)",
+        "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
         {
           "q1": "2",
           "q2": "1",
@@ -311,90 +247,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "de 40",
-      "label": "AUDIT",
-      "fields": [
-        [
-          "q1",
-          "sel",
-          0
-        ],
-        [
-          "q2",
-          "sel",
-          0
-        ],
-        [
-          "q3",
-          "sel",
-          0
-        ],
-        [
-          "q4",
-          "sel",
-          0
-        ],
-        [
-          "q5",
-          "sel",
-          0
-        ],
-        [
-          "q6",
-          "sel",
-          0
-        ],
-        [
-          "q7",
-          "sel",
-          0
-        ],
-        [
-          "q8",
-          "sel",
-          0
-        ],
-        [
-          "q9",
-          "sel",
-          0
-        ],
-        [
-          "q10",
-          "sel",
-          0
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "low",
-          "Zona I (0 a 7): uso de baixo risco",
-          "Educação em saúde sobre álcool."
-        ],
-        [
-          8,
-          "mid",
-          "Zona II (8 a 15): uso de risco",
-          "Orientação básica (intervenção breve) sobre redução do consumo."
-        ],
-        [
-          16,
-          "high",
-          "Zona III (16 a 19): uso nocivo",
-          "Intervenção breve com aconselhamento e acompanhamento continuado."
-        ],
-        [
-          20,
-          "high",
-          "Zona IV (20 a 40): provável dependência",
-          "Encaminhar a serviço especializado (CAPS AD ou especialista) para avaliação diagnóstica e tratamento."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -403,17 +255,420 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T13:01:58.037Z",
+      "total": 89,
+      "passed": 89,
+      "evidencePath": "reports/review-20261003/four-score-sum-source-oracles-who2001-final23.json",
+      "evidenceSha256": "27a16a7e85f1496bd700ba029621b1d4ab1d570360cc82b9c67f7a27c572174d",
+      "peerEvidencePath": "reports/review-20261003/independent-four-score-sum-source-oracles-who2001-final23.json",
+      "peerEvidenceSha256": "7c8e3bb0f5743d8026242e8efcb8fc406645290d741779120b141654f613af39",
+      "scope": "Integer point sum only. Item wording, diagnosis, severity thresholds, population applicability, translations, release suitability and rights are not approved.",
+      "source": {
+        "keys": [
+          "q1",
+          "q2",
+          "q3",
+          "q4",
+          "q5",
+          "q6",
+          "q7",
+          "q8",
+          "q9",
+          "q10"
+        ],
+        "options": [
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ],
+          [
+            0,
+            2,
+            4
+          ]
+        ],
+        "max": 40,
+        "url": "https://www.afro.who.int/sites/default/files/2017-06/english_0.pdf",
+        "edition": "WHO2001AUDIT second edition, WHO/MSD/MSB/01.6a",
+        "locator": "AppendixB PDFp31 response values and p30 scoring instructions",
+        "access": "Official WHO primary manual scoring table and instructions read directly on2026-10-04. Current q2/q3 wording differs from WHO anchors and is separately under a documented source amendment; this oracle checks the entered integer point sum only."
+      },
+      "implementations": [
+        {
+          "app": "website",
+          "id": "audit",
+          "sha256": "9ced558c8529ec9a202989318f41843c52d843a7a317ab76ca1eba8b92a99f68"
+        },
+        {
+          "app": "dashboard",
+          "id": "audit",
+          "sha256": "9ced558c8529ec9a202989318f41843c52d843a7a317ab76ca1eba8b92a99f68"
+        },
+        {
+          "app": "command-center",
+          "id": "audit",
+          "sha256": "9ced558c8529ec9a202989318f41843c52d843a7a317ab76ca1eba8b92a99f68"
+        }
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "prerequisiteSourceContract": {
+        "evidencePath": "reports/review-20261003/audit-who2001-source-contract-candidate-final23-v2.json",
+        "evidenceSha256": "1f42ada2abefbdb24ca67c6c3da68934a7d2a25f350dce0e7a0a656517b667ba",
+        "implementationSha256": "9ced558c8529ec9a202989318f41843c52d843a7a317ab76ca1eba8b92a99f68",
+        "scope": "WHO2001 q2/q3 only; same311-vector oracle has fresh execution binding. Full instrument, clinical and professional translation review remain unperformed."
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "AUDIT: OMS, 2ª edição (2001); itens 2 e 3 com bebida-padrão de 10 g de etanol; tradução de interface ELUCENIA.",
+    "implementationVersion": "audit@native-2026-10-04+9ced558c8529",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/8329970/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Itens 1 a 8: 0 a 4 pontos. Itens 9 e 10: 0, 2 ou 4 pontos. Total: 0 a 40. Pontuação ≥ 8 indica uso de risco ou nocivo e possível dependência. Pontos nos itens 4 a 6 sugerem dependência; nos itens 7 a 10, dano já instalado.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "q1",
+            "label": "1. Com que frequência você consome bebidas alcoólicas?",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Nunca",
+              "1": "Mensalmente ou menos",
+              "2": "De 2 a 4 vezes por mês",
+              "3": "De 2 a 3 vezes por semana",
+              "4": "4 ou mais vezes por semana"
+            }
+          },
+          {
+            "key": "q2",
+            "label": "2. Num dia típico em que bebe, quantas bebidas-padrão consome? Nesta edição, cada bebida-padrão contém 10 g de etanol.",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "1 ou 2",
+              "1": "3 ou 4",
+              "2": "5 ou 6",
+              "3": "7 a 9",
+              "4": "10 ou mais"
+            }
+          },
+          {
+            "key": "q3",
+            "label": "3. Com que frequência bebe seis ou mais bebidas-padrão na mesma ocasião? Nesta edição, cada bebida-padrão contém 10 g de etanol.",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Nunca",
+              "1": "Menos do que uma vez ao mês",
+              "2": "Mensalmente",
+              "3": "Semanalmente",
+              "4": "Todos ou quase todos os dias"
+            }
+          },
+          {
+            "key": "q4",
+            "label": "4. Quantas vezes ao longo dos últimos 12 meses você achou que não conseguiria parar de beber uma vez tendo começado?",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Nunca",
+              "1": "Menos do que uma vez ao mês",
+              "2": "Mensalmente",
+              "3": "Semanalmente",
+              "4": "Todos ou quase todos os dias"
+            }
+          },
+          {
+            "key": "q5",
+            "label": "5. Quantas vezes ao longo dos últimos 12 meses você, por causa do álcool, não conseguiu fazer o que era esperado de você?",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Nunca",
+              "1": "Menos do que uma vez ao mês",
+              "2": "Mensalmente",
+              "3": "Semanalmente",
+              "4": "Todos ou quase todos os dias"
+            }
+          },
+          {
+            "key": "q6",
+            "label": "6. Quantas vezes ao longo dos últimos 12 meses você precisou beber pela manhã para poder se sentir bem ao longo do dia após ter bebido bastante no dia anterior?",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Nunca",
+              "1": "Menos do que uma vez ao mês",
+              "2": "Mensalmente",
+              "3": "Semanalmente",
+              "4": "Todos ou quase todos os dias"
+            }
+          },
+          {
+            "key": "q7",
+            "label": "7. Quantas vezes ao longo dos últimos 12 meses você se sentiu culpado(a) ou com remorso depois de ter bebido?",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Nunca",
+              "1": "Menos do que uma vez ao mês",
+              "2": "Mensalmente",
+              "3": "Semanalmente",
+              "4": "Todos ou quase todos os dias"
+            }
+          },
+          {
+            "key": "q8",
+            "label": "8. Quantas vezes ao longo dos últimos 12 meses você foi incapaz de lembrar o que aconteceu devido à bebida?",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Nunca",
+              "1": "Menos do que uma vez ao mês",
+              "2": "Mensalmente",
+              "3": "Semanalmente",
+              "4": "Todos ou quase todos os dias"
+            }
+          },
+          {
+            "key": "q9",
+            "label": "9. Você já causou ferimentos ou prejuízos a você mesmo(a) ou a outra pessoa após ter bebido?",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Não",
+              "2": "Sim, mas não nos últimos 12 meses",
+              "4": "Sim, nos últimos 12 meses"
+            }
+          },
+          {
+            "key": "q10",
+            "label": "10. Algum parente, amigo ou médico já se preocupou com o fato de você beber ou sugeriu que você parasse?",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "0": "Não",
+              "2": "Sim, mas não nos últimos 12 meses",
+              "4": "Sim, nos últimos 12 meses"
+            }
+          }
+        ],
+        "hash": "d5e88fa0e7b7301857dc3e76454d2bf4118fa645efacbb38bf304f469982b36c"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Saunders JB et al. Development of the Alcohol Use Disorders Identification Test (AUDIT): WHO Collaborative Project on Early Detection of Persons with Harmful Alcohol Consumption-II. Addiction, 1993.",
+          "url": "https://doi.org/10.1111/j.1360-0443.1993.tb02093.x",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Development of the Alcohol Use Disorders Identification Test (AUDIT): WHO Collaborative Project on Early Detection of Persons with Harmful Alcohol Consumption--II.",
+            "year": "1993",
+            "firstPublicationDate": "1993-06-01",
+            "doi": "10.1111/j.1360-0443.1993.tb02093.x",
+            "pmid": "8329970",
+            "journal": "Addiction (Abingdon, England)",
+            "authors": "Saunders JB, Aasland OG, Babor TF, de la Fuente JR, Grant M."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/8329970/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "1815e7122dbaee65fb5c43560cded3b639be57d378c8c250343029d010ea84bf",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Lima CT et al. Concurrent and construct validity of the AUDIT in an urban Brazilian sample. Alcohol Alcohol, 2005.",
+          "url": "https://doi.org/10.1093/alcalc/agh202",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Concurrent and construct validity of the audit in an urban brazilian sample.",
+            "year": "2005",
+            "firstPublicationDate": "2005-09-05",
+            "doi": "10.1093/alcalc/agh202",
+            "pmid": "16143704",
+            "journal": "Alcohol and alcoholism (Oxford, Oxfordshire)",
+            "authors": "Lima CT, Freire AC, Silva AP, Teixeira RM, Farrell M, Prince M."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/16143704/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "cae6db3f506601419f4d51851fe4e1281c465abfcc056bd24f71b03acdd706bd",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Babor TF et al. AUDIT: the Alcohol Use Disorders Identification Test. Guidelines for use in primary care. 2nd ed. World Health Organization, 2001.",
+          "url": "https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a",
+          "class": "institutional-edition-page-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "edition": "Second edition, 18 November 2001; WHO/MSD/MSB/01.6a"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T13:01:58.037Z",
+        "total": 89,
+        "passed": 89,
+        "evidencePath": "reports/review-20261003/four-score-sum-source-oracles-who2001-final23.json",
+        "scope": "Integer point sum only. Item wording, diagnosis, severity thresholds, population applicability, translations, release suitability and rights are not approved.",
+        "caseEvidence": {
+          "schema": "independentArithmeticTest.cases",
+          "recordedEvidenceSha256": "d649efe20373527c7e10f75a80acd34fb6e2fff54c13c240f3d378ef5505006b"
+        }
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "9ced558c8529ec9a202989318f41843c52d843a7a317ab76ca1eba8b92a99f68",
+      "sourceContractAmendment": {
+        "checkedAt": "2026-10-04",
+        "edition": "WHO/MSD/MSB/01.6a, second edition, 2001",
+        "sourceUrl": "https://www.afro.who.int/sites/default/files/2017-06/english_0.pdf",
+        "locators": [
+          "PDF page 17: Box 4, interview questions 2 and 3",
+          "PDF page 31: Appendix B, self-report question 2 response columns",
+          "PDF page 32: Appendix C, standard drink definition and cultural adaptation",
+          "PDF page 2: rights notice"
+        ],
+        "scope": "Question 2 score-to-category mapping, question 3 six-or-more standard-drink trigger, and explicit10g ethanol reference only. All other wording, screening interpretation and population adaptation remain outside this source-contract correction.",
+        "questions": [
+          "q2",
+          "q3"
+        ],
+        "standardDrinkEthanolGrams": 10,
+        "question2": {
+          "0": "1 ou 2",
+          "1": "3 ou 4",
+          "2": "5 ou 6",
+          "3": "7 a 9",
+          "4": "10 ou mais"
+        },
+        "question3Trigger": {
+          "drinks": 6,
+          "inclusive": true
+        },
+        "sourceReviewFile": "reports/review-20261003/audit-who2001-primary-source-review-final23.json",
+        "sourceReviewSha256": "eb9736a303b5bca77e401bf5cdced45abeb1fc34259e1661dd093d0a18e51fbe",
+        "historical": {
+          "methodVersion": "AUDIT/WHO 1993; manual 2ªedição 2001:10 itens, total 0–40",
+          "implementationVersion": "audit@native-2026-10-03+744fb7187559",
+          "inputContractSha256": "908aabf7f997a4a0fe4cd51bc8496694a3c8e7d299e704c76810fa2e7cd60ed0",
+          "referenceCasesSha256": "726e671673ce247350d04c007b98fc07313e2fffd5fb409c8014bfb4b3184e78",
+          "firstReferenceDescription": "Bebe 2 a 4 vezes por mês, 2 ou 3 doses, 5 ou mais doses menos de uma vez ao mês: 4 (zona I)"
+        },
+        "remainingReview": [
+          "All other AUDIT item wording and administration/skip instructions.",
+          "Screening interpretation, clinical decisions and population adaptation.",
+          "Independent professional review of the nine authored language editions.",
+          "Rights and permissions for instrument reproduction and translation."
+        ],
+        "fullInstrumentConformanceReviewed": false,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "officialInstrumentTranslation": false,
+        "rightsApproval": "not-performed"
+      }
+    },
+    "limits": "Instrumento de rastreamento de consumo de álcool de risco ou nocivo, estudado em atenção primária. A soma não estabelece, isoladamente, dependência. Nesta implementação, os itens 2 e 3 usam a edição OMS 2001 e uma bebida-padrão de 10 g de etanol; a quantidade consumida deve ser convertida para essa referência. Copos nacionais não são equivalentes automaticamente. A redação e as adaptações populacionais em cada idioma requerem revisão independente.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.739Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Bebida-padrão, tempo de recordação, ajustes de população e instruções integrais do manual não foram conferidos."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/audit/calculator.js",
+    "bytes": 7266,
+    "sha256": "9ced558c8529ec9a202989318f41843c52d843a7a317ab76ca1eba8b92a99f68"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "5e9da2a016f0556ef6e3ac1ac9918c849a5c661657549c248056388d0915a810",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 89,
+      "sha256": "c5da5a6b4067148a6537924a13a299d71ebe04aec61b6904a35b1906d66023db",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
