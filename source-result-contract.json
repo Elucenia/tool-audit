@@ -1,0 +1,252 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "audit",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "990533b6ba9ddc8d36809d83c1dab0b1f2da2a7d",
+    "oldEngineSha256": "9ced558c8529ec9a202989318f41843c52d843a7a317ab76ca1eba8b92a99f68",
+    "currentEngineSha256": "3b75a0695aef2458c3e952b6075fd9edbc41d562661453675529f475213d3ba6"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+      "input": {
+        "q1": "2",
+        "q2": "1",
+        "q3": "1",
+        "q4": "0",
+        "q5": "0",
+        "q6": "0",
+        "q7": "0",
+        "q8": "0",
+        "q9": "0",
+        "q10": "0"
+      },
+      "publicOutput": {
+        "id": "audit",
+        "main": [
+          "4",
+          "de 40"
+        ],
+        "label": "AUDIT",
+        "raw": {
+          "score": 4
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 4,
+        "level": "low",
+        "verdict": "Zona I"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "4",
+          "de 40"
+        ],
+        "label": "AUDIT",
+        "level": "low",
+        "verdict": "Zona I (0 a 7): uso de baixo risco",
+        "note": "Educação em saúde sobre álcool.",
+        "raw": {
+          "score": 4
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Limite da zona II: 8 pontos",
+      "input": {
+        "q1": "3",
+        "q2": "2",
+        "q3": "2",
+        "q4": "1",
+        "q5": "0",
+        "q6": "0",
+        "q7": "0",
+        "q8": "0",
+        "q9": "0",
+        "q10": "0"
+      },
+      "publicOutput": {
+        "id": "audit",
+        "main": [
+          "8",
+          "de 40"
+        ],
+        "label": "AUDIT",
+        "raw": {
+          "score": 8
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 8,
+        "level": "mid",
+        "verdict": "Zona II"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "8",
+          "de 40"
+        ],
+        "label": "AUDIT",
+        "level": "mid",
+        "verdict": "Zona II (8 a 15): uso de risco",
+        "note": "Orientação básica (intervenção breve) sobre redução do consumo.",
+        "raw": {
+          "score": 8
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Limite da zona III: 16 pontos",
+      "input": {
+        "q1": "4",
+        "q2": "3",
+        "q3": "3",
+        "q4": "2",
+        "q5": "2",
+        "q6": "0",
+        "q7": "2",
+        "q8": "0",
+        "q9": "0",
+        "q10": "0"
+      },
+      "publicOutput": {
+        "id": "audit",
+        "main": [
+          "16",
+          "de 40"
+        ],
+        "label": "AUDIT",
+        "raw": {
+          "score": 16
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 16,
+        "level": "high",
+        "verdict": "Zona III"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "16",
+          "de 40"
+        ],
+        "label": "AUDIT",
+        "level": "high",
+        "verdict": "Zona III (16 a 19): uso nocivo",
+        "note": "Intervenção breve com aconselhamento e acompanhamento continuado.",
+        "raw": {
+          "score": 16
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 3,
+      "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+      "input": {
+        "q1": "4",
+        "q2": "4",
+        "q3": "4",
+        "q4": "3",
+        "q5": "2",
+        "q6": "2",
+        "q7": "2",
+        "q8": "0",
+        "q9": "4",
+        "q10": "0"
+      },
+      "publicOutput": {
+        "id": "audit",
+        "main": [
+          "25",
+          "de 40"
+        ],
+        "label": "AUDIT",
+        "raw": {
+          "score": 25
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 25,
+        "level": "high",
+        "verdict": "Zona IV"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "25",
+          "de 40"
+        ],
+        "label": "AUDIT",
+        "level": "high",
+        "verdict": "Zona IV (20 a 40): provável dependência",
+        "note": "Encaminhar a serviço especializado (CAPS AD ou especialista) para avaliação diagnóstica e tratamento.",
+        "raw": {
+          "score": 25
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    }
+  ]
+}

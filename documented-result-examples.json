@@ -1,0 +1,707 @@
+{
+  "id": "audit",
+  "implementationVersion": "audit@native-2026-10-05+3b75a0695aef",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona I (0 a 7): uso de baixo risco",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Educação em saúde sobre álcool.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Limite da zona II: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona II (8 a 15): uso de risco",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Orientação básica (intervenção breve) sobre redução do consumo.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Limite da zona III: 16 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona III (16 a 19): uso nocivo",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Intervenção breve com aconselhamento e acompanhamento continuado.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona IV (20 a 40): provável dependência",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Encaminhar a serviço especializado (CAPS AD ou especialista) para avaliação diagnóstica e tratamento.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone I (0 to 7): low-risk use",
+            "locale": "en",
+            "template": "documented-authored-55117cb05f80dd0e3860"
+          },
+          "note": {
+            "text": "Health education on alcohol.",
+            "locale": "en",
+            "template": "documented-authored-6f7ec6a0707ace7ec244"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Limite da zona II: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone II (8 to 15): hazardous use",
+            "locale": "en",
+            "template": "documented-authored-325baee711c82bbd6def"
+          },
+          "note": {
+            "text": "Basic guidance (brief intervention) on reducing consumption.",
+            "locale": "en",
+            "template": "documented-authored-b2125772b2963774da2e"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Limite da zona III: 16 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone III (16 to 19): harmful use",
+            "locale": "en",
+            "template": "documented-authored-9b02ff6eaaf8b8b7a6bd"
+          },
+          "note": {
+            "text": "Brief intervention with counseling and ongoing follow-up.",
+            "locale": "en",
+            "template": "documented-authored-94ed454371edc6eba87a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone IV (20 to 40): probable dependence",
+            "locale": "en",
+            "template": "documented-authored-dfa05c44f885a0031061"
+          },
+          "note": {
+            "text": "Refer to a specialized service (CAPS AD or specialist) for diagnostic evaluation and treatment.",
+            "locale": "en",
+            "template": "documented-authored-5f14194410abf985f730"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona I (0 a 7): uso de bajo riesgo",
+            "locale": "es",
+            "template": "documented-authored-55117cb05f80dd0e3860"
+          },
+          "note": {
+            "text": "Educación en salud sobre el alcohol.",
+            "locale": "es",
+            "template": "documented-authored-6f7ec6a0707ace7ec244"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Limite da zona II: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona II (8 a 15): uso de riesgo",
+            "locale": "es",
+            "template": "documented-authored-325baee711c82bbd6def"
+          },
+          "note": {
+            "text": "Orientación básica (intervención breve) sobre la reducción del consumo.",
+            "locale": "es",
+            "template": "documented-authored-b2125772b2963774da2e"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Limite da zona III: 16 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona III (16 a 19): uso nocivo",
+            "locale": "es",
+            "template": "documented-authored-9b02ff6eaaf8b8b7a6bd"
+          },
+          "note": {
+            "text": "Intervención breve con asesoramiento y seguimiento continuo.",
+            "locale": "es",
+            "template": "documented-authored-94ed454371edc6eba87a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona IV (20 a 40): probable dependencia",
+            "locale": "es",
+            "template": "documented-authored-dfa05c44f885a0031061"
+          },
+          "note": {
+            "text": "Derivar a un servicio especializado (CAPS AD o especialista) para evaluación diagnóstica y tratamiento.",
+            "locale": "es",
+            "template": "documented-authored-5f14194410abf985f730"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone I (0 à 7) : consommation à faible risque",
+            "locale": "fr",
+            "template": "documented-authored-55117cb05f80dd0e3860"
+          },
+          "note": {
+            "text": "Éducation à la santé sur l’alcool.",
+            "locale": "fr",
+            "template": "documented-authored-6f7ec6a0707ace7ec244"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Limite da zona II: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone II (8 à 15) : consommation à risque",
+            "locale": "fr",
+            "template": "documented-authored-325baee711c82bbd6def"
+          },
+          "note": {
+            "text": "Conseils de base (intervention brève) sur la réduction de la consommation.",
+            "locale": "fr",
+            "template": "documented-authored-b2125772b2963774da2e"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Limite da zona III: 16 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone III (16 à 19) : consommation nocive",
+            "locale": "fr",
+            "template": "documented-authored-9b02ff6eaaf8b8b7a6bd"
+          },
+          "note": {
+            "text": "Intervention brève avec conseil et suivi continu.",
+            "locale": "fr",
+            "template": "documented-authored-94ed454371edc6eba87a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone IV (20 à 40) : dépendance probable",
+            "locale": "fr",
+            "template": "documented-authored-dfa05c44f885a0031061"
+          },
+          "note": {
+            "text": "Adresser à un service spécialisé (CAPS AD ou spécialiste) pour une évaluation diagnostique et un traitement.",
+            "locale": "fr",
+            "template": "documented-authored-5f14194410abf985f730"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone I (0 bis 7): Konsum mit niedrigem Risiko",
+            "locale": "de",
+            "template": "documented-authored-55117cb05f80dd0e3860"
+          },
+          "note": {
+            "text": "Gesundheitsaufklärung zum Alkohol.",
+            "locale": "de",
+            "template": "documented-authored-6f7ec6a0707ace7ec244"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Limite da zona II: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone II (8 bis 15): risikoreicher Konsum",
+            "locale": "de",
+            "template": "documented-authored-325baee711c82bbd6def"
+          },
+          "note": {
+            "text": "Grundlegende Beratung (Kurzintervention) zur Reduktion des Konsums.",
+            "locale": "de",
+            "template": "documented-authored-b2125772b2963774da2e"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Limite da zona III: 16 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone III (16 bis 19): schädlicher Konsum",
+            "locale": "de",
+            "template": "documented-authored-9b02ff6eaaf8b8b7a6bd"
+          },
+          "note": {
+            "text": "Kurzintervention mit Beratung und fortlaufender Nachsorge.",
+            "locale": "de",
+            "template": "documented-authored-94ed454371edc6eba87a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zone IV (20 bis 40): wahrscheinliche Abhängigkeit",
+            "locale": "de",
+            "template": "documented-authored-dfa05c44f885a0031061"
+          },
+          "note": {
+            "text": "Zur diagnostischen Abklärung und Behandlung an eine spezialisierte Einrichtung (CAPS AD oder Facharzt) überweisen.",
+            "locale": "de",
+            "template": "documented-authored-5f14194410abf985f730"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona I (0 a 7): uso a basso rischio",
+            "locale": "it",
+            "template": "documented-authored-55117cb05f80dd0e3860"
+          },
+          "note": {
+            "text": "Educazione sanitaria sull'alcol.",
+            "locale": "it",
+            "template": "documented-authored-6f7ec6a0707ace7ec244"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Limite da zona II: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona II (8 a 15): uso a rischio",
+            "locale": "it",
+            "template": "documented-authored-325baee711c82bbd6def"
+          },
+          "note": {
+            "text": "Indicazioni di base (intervento breve) sulla riduzione del consumo.",
+            "locale": "it",
+            "template": "documented-authored-b2125772b2963774da2e"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Limite da zona III: 16 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona III (16 a 19): uso dannoso",
+            "locale": "it",
+            "template": "documented-authored-9b02ff6eaaf8b8b7a6bd"
+          },
+          "note": {
+            "text": "Intervento breve con counseling e follow-up continuativo.",
+            "locale": "it",
+            "template": "documented-authored-94ed454371edc6eba87a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Zona IV (20 a 40): probabile dipendenza",
+            "locale": "it",
+            "template": "documented-authored-dfa05c44f885a0031061"
+          },
+          "note": {
+            "text": "Inviare a un servizio specialistico (CAPS AD o specialista) per valutazione diagnostica e trattamento.",
+            "locale": "it",
+            "template": "documented-authored-5f14194410abf985f730"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "المنطقة I (0 إلى 7): استعمال منخفض الخطورة",
+            "locale": "ar",
+            "template": "documented-authored-55117cb05f80dd0e3860"
+          },
+          "note": {
+            "text": "التثقيف الصحي حول الكحول.",
+            "locale": "ar",
+            "template": "documented-authored-6f7ec6a0707ace7ec244"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Limite da zona II: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "المنطقة II (8 إلى 15): استعمال خطِر",
+            "locale": "ar",
+            "template": "documented-authored-325baee711c82bbd6def"
+          },
+          "note": {
+            "text": "إرشاد أساسي (تدخل قصير) بشأن خفض الاستهلاك.",
+            "locale": "ar",
+            "template": "documented-authored-b2125772b2963774da2e"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Limite da zona III: 16 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "المنطقة III (16 إلى 19): استعمال ضار",
+            "locale": "ar",
+            "template": "documented-authored-9b02ff6eaaf8b8b7a6bd"
+          },
+          "note": {
+            "text": "تدخل قصير مع المشورة والمتابعة المستمرة.",
+            "locale": "ar",
+            "template": "documented-authored-94ed454371edc6eba87a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "المنطقة IV (20 إلى 40): اعتماد محتمل",
+            "locale": "ar",
+            "template": "documented-authored-dfa05c44f885a0031061"
+          },
+          "note": {
+            "text": "إحالة إلى خدمة متخصصة (CAPS AD أو اختصاصي) لإجراء التقييم التشخيصي والعلاج.",
+            "locale": "ar",
+            "template": "documented-authored-5f14194410abf985f730"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "I 区（0 至 7）：低风险使用",
+            "locale": "zh",
+            "template": "documented-authored-55117cb05f80dd0e3860"
+          },
+          "note": {
+            "text": "关于酒精的健康教育。",
+            "locale": "zh",
+            "template": "documented-authored-6f7ec6a0707ace7ec244"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Limite da zona II: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "II 区（8 至 15）：有风险使用",
+            "locale": "zh",
+            "template": "documented-authored-325baee711c82bbd6def"
+          },
+          "note": {
+            "text": "关于减少摄入的基本指导（简短干预）。",
+            "locale": "zh",
+            "template": "documented-authored-b2125772b2963774da2e"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Limite da zona III: 16 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "III 区（16 至 19）：有害使用",
+            "locale": "zh",
+            "template": "documented-authored-9b02ff6eaaf8b8b7a6bd"
+          },
+          "note": {
+            "text": "简短干预，辅以咨询和持续随访。",
+            "locale": "zh",
+            "template": "documented-authored-94ed454371edc6eba87a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "IV 区（20 至 40）：可能依赖",
+            "locale": "zh",
+            "template": "documented-authored-dfa05c44f885a0031061"
+          },
+          "note": {
+            "text": "转诊至专科服务（CAPS AD 或专科医生）以进行诊断评估和治疗。",
+            "locale": "zh",
+            "template": "documented-authored-5f14194410abf985f730"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ゾーン I（0～7）：低リスク使用",
+            "locale": "ja",
+            "template": "documented-authored-55117cb05f80dd0e3860"
+          },
+          "note": {
+            "text": "アルコールに関する保健教育。",
+            "locale": "ja",
+            "template": "documented-authored-6f7ec6a0707ace7ec244"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Limite da zona II: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ゾーン II（8～15）：危険な使用",
+            "locale": "ja",
+            "template": "documented-authored-325baee711c82bbd6def"
+          },
+          "note": {
+            "text": "摂取量を減らすための基本的な指導（短時間介入）。",
+            "locale": "ja",
+            "template": "documented-authored-b2125772b2963774da2e"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Limite da zona III: 16 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ゾーン III（16～19）：有害な使用",
+            "locale": "ja",
+            "template": "documented-authored-9b02ff6eaaf8b8b7a6bd"
+          },
+          "note": {
+            "text": "カウンセリングと継続的なフォローアップを伴う短時間介入。",
+            "locale": "ja",
+            "template": "documented-authored-94ed454371edc6eba87a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ゾーン IV（20～40）：依存の可能性あり",
+            "locale": "ja",
+            "template": "documented-authored-dfa05c44f885a0031061"
+          },
+          "note": {
+            "text": "診断評価と治療のために専門機関（CAPS AD または専門医）へ紹介する。",
+            "locale": "ja",
+            "template": "documented-authored-5f14194410abf985f730"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Caso sintético: q1=2, q2=1, q3=1 e demais itens=0; soma=4.",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ज़ोन I (0 से 7): कम-जोखिम उपयोग",
+            "locale": "hi",
+            "template": "documented-authored-55117cb05f80dd0e3860"
+          },
+          "note": {
+            "text": "शराब के बारे में स्वास्थ्य शिक्षा.",
+            "locale": "hi",
+            "template": "documented-authored-6f7ec6a0707ace7ec244"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Limite da zona II: 8 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ज़ोन II (8 से 15): जोखिमपूर्ण उपयोग",
+            "locale": "hi",
+            "template": "documented-authored-325baee711c82bbd6def"
+          },
+          "note": {
+            "text": "खपत कम करने के बारे में बुनियादी मार्गदर्शन (संक्षिप्त हस्तक्षेप).",
+            "locale": "hi",
+            "template": "documented-authored-b2125772b2963774da2e"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Limite da zona III: 16 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ज़ोन III (16 से 19): हानिकारक उपयोग",
+            "locale": "hi",
+            "template": "documented-authored-9b02ff6eaaf8b8b7a6bd"
+          },
+          "note": {
+            "text": "परामर्श और निरंतर अनुवर्ती के साथ संक्षिप्त हस्तक्षेप.",
+            "locale": "hi",
+            "template": "documented-authored-94ed454371edc6eba87a"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Consumo diário pesado com dano nos últimos 12 meses: 25 (zona IV)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ज़ोन IV (20 से 40): संभावित निर्भरता",
+            "locale": "hi",
+            "template": "documented-authored-dfa05c44f885a0031061"
+          },
+          "note": {
+            "text": "नैदानिक मूल्यांकन और उपचार के लिए विशेष सेवा (CAPS AD या विशेषज्ञ) को भेजें.",
+            "locale": "hi",
+            "template": "documented-authored-5f14194410abf985f730"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

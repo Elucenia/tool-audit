@@ -153,3 +153,35 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Zone I (0 to 7): low-risk use
+
+Health education on alcohol.
+
+
+### 2
+
+Zone II (8 to 15): hazardous use
+
+Basic guidance (brief intervention) on reducing consumption.
+
+
+### 3
+
+Zone III (16 to 19): harmful use
+
+Brief intervention with counseling and ongoing follow-up.
+
+
+### 4
+
+Zone IV (20 to 40): probable dependence
+
+Refer to a specialized service (CAPS AD or specialist) for diagnostic evaluation and treatment.
+

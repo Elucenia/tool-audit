@@ -380,7 +380,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "AUDIT: OMS, 2ª edição (2001); itens 2 e 3 com bebida-padrão de 10 g de etanol; tradução de interface ELUCENIA.",
-    "implementationVersion": "audit@native-2026-10-04+9ced558c8529",
+    "implementationVersion": "audit@native-2026-10-05+3b75a0695aef",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/8329970/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -590,7 +590,7 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "9ced558c8529ec9a202989318f41843c52d843a7a317ab76ca1eba8b92a99f68",
+      "implementationHash": "3b75a0695aef2458c3e952b6075fd9edbc41d562661453675529f475213d3ba6",
       "sourceContractAmendment": {
         "checkedAt": "2026-10-04",
         "edition": "WHO/MSD/MSB/01.6a, second edition, 2001",
@@ -638,7 +638,35 @@
         "professionalLanguageApproval": "not-performed",
         "officialInstrumentTranslation": false,
         "rightsApproval": "not-performed"
-      }
+      },
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "audit@native-2026-10-04+9ced558c8529",
+          "previousImplementationHash": "9ced558c8529ec9a202989318f41843c52d843a7a317ab76ca1eba8b92a99f68",
+          "implementationHash": "3b75a0695aef2458c3e952b6075fd9edbc41d562661453675529f475213d3ba6",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "d5e88fa0e7b7301857dc3e76454d2bf4118fa645efacbb38bf304f469982b36c",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "Instrumento de rastreamento de consumo de álcool de risco ou nocivo, estudado em atenção primária. A soma não estabelece, isoladamente, dependência. Nesta implementação, os itens 2 e 3 usam a edição OMS 2001 e uma bebida-padrão de 10 g de etanol; a quantidade consumida deve ser convertida para essa referência. Copos nacionais não são equivalentes automaticamente. A redação e as adaptações populacionais em cada idioma requerem revisão independente.",
     "sourceLimitEvidence": {
@@ -657,15 +685,15 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/audit/calculator.js",
-    "bytes": 7266,
-    "sha256": "9ced558c8529ec9a202989318f41843c52d843a7a317ab76ca1eba8b92a99f68"
+    "bytes": 7471,
+    "sha256": "3b75a0695aef2458c3e952b6075fd9edbc41d562661453675529f475213d3ba6"
   },
-  "sourceToolSha256": "5e9da2a016f0556ef6e3ac1ac9918c849a5c661657549c248056388d0915a810",
+  "sourceToolSha256": "2e60960f2565fde8498d9b6bed5fcf077b2286fef3fba60e71665116fecc7623",
   "omittedFullReferenceBanks": [
     {
       "rows": 89,
       "sha256": "c5da5a6b4067148a6537924a13a299d71ebe04aec61b6904a35b1906d66023db",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",
